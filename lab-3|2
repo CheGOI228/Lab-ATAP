@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <math.h>
+
+double func(double x, int n) {
+    double res = 1.0;
+    for (int i = 0; i < n; i++) {
+        res = 1 + (2 * i + 1) * x * res / (i + 1);
+    }
+    return res;
+}
+
+int main() {
+    int n;
+    double x_start, x_end, dX, epsilon;
+
+    printf("Number of terms n: ");
+    scanf("%d", &n);
+
+    printf("Starting value x_start: ");
+    scanf("%lf", &x_start);
+
+    printf("Ending value x_end: ");
+    scanf("%lf", &x_end);
+
+    printf("Step size dX: ");
+    scanf("%lf", &dX);
+
+    printf("Error limit epsilon: ");
+    scanf("%lf", &epsilon);
+
+    printf("\nX\t\t\tApprox_sin\t\tTrue_sin\t\tError\n");
+
+    for (double x = x_start; x <= x_end; x += dX) {
+        double approx_sin = func(x, n);
+        double true_sin = sin(x);
+        double error = fabs(approx_sin - true_sin);
+
+        printf("%lf\t%lf\t%lf\t%lf\n", x, approx_sin, true_sin, error);
+    }
+
+    return 0;
+}
