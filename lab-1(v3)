@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, z1, z2;
+    scanf("%lf", &a);
+    z1 = 1 - ((1/4)*(pow(sin(2*a), 2))+(cos(2*a)));
+    printf("%lg\n", z1);
+    z2 = (pow(cos(a), 2))+(pow(cos(a), 4));
+    printf("%lg\n", z2);
+    
+    return 0;
+}
