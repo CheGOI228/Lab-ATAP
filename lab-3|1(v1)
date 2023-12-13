@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    
+    double a, x, b, c, f;
+    
+    printf("a = ");
+    scanf("%lf", &a);
+    printf("b = ");
+    scanf("%lf", &b);
+    printf("c = ");
+    scanf("%lf", &c);
+    printf("x = ");
+    scanf("%lf", &x);
+    
+    if (x < 0 && b != 0)
+            f = a*pow(x, 2)+b;
+    else if (x > 0 && b == 0)
+            f = (x-a)/(x-c);
+    else
+        f = (x/c);
+    
+    printf("f = %lg\n", f);
+    
+    return 0;
+}
