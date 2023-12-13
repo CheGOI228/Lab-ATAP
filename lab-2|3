@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, h, x, y;
+    scanf("%lf", &a);
+    scanf("%lf", &b);
+    scanf("%lf", &h);
+    if (a > b){
+       x = (a + b + h)*4;
+       printf("%lg\n", x);
+    }
+    else if (a < b){
+        printf("B більше, ніж A");
+    }
+    if (a > b){
+        y = (((2*a)+(2*b))*h)+(2*a*b);
+        printf("%lg\n", y);
+    }
+    else if (a < b){
+         printf("B більше, ніж A");
+    }
+    return 0;
+}
