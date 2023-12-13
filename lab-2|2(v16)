@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x, y, z, a;
+    scanf("%lf", &x);
+    scanf("%lf", &y);
+    scanf("%lf", &z);
+    a = ((fabs(x)+fabs(y)+fabs(z))/3) + ((pow(x, 3)+(pow(y, 3))+(pow(z, 3)))/3);
+    printf("%lg\n", a);
+    return 0;
+}
