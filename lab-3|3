@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+void determineChessPiece(char x, int y) {
+    switch (x) {
+        case 'A':
+            if (y == 1)
+                printf("Фігура на клітинці %c%d: Тура (Castle)\n", x, y);
+            else if (y > 1 && y < 9)
+                printf("Фігура на клітинці %c%d: Пішак (Pawn)\n", x, y);
+            break;
+        case 'B':
+            if (y == 1)
+                printf("Фігура на клітинці %c%d: Кінь (Horse)\n", x, y);
+            else if (y > 1 && y < 9)
+                printf("Фігура на клітинці %c%d: Пішак (Pawn)\n", x, y);
+            break;
+        case 'C':
+            if (y == 1)
+                printf("Фігура на клітинці %c%d: Слон (Bishop)\n", x, y);
+            else if (y > 1 && y < 9)
+                printf("Фігура на клітинці %c%d: Пішак (Pawn)\n", x, y);
+            break;
+        case 'D':
+            if (y == 1)
+                printf("Фігура на клітинці %c%d: Ферзь (Queen)\n", x, y);
+            else if (y == 2)
+                printf("Фігура на клітинці %c%d: Пішак (Pawn)\n", x, y);
+            break;
+        case 'E':
+            if (y == 1)
+                printf("Фігура на клітинці %c%d: Король (King)\n", x, y);
+            else if (y > 1 && y < 9)
+                printf("Фігура на клітинці %c%d: Пішак (Pawn)\n", x, y);
+            break;
+        default:
+            printf("Фігура на клітинці %c%d: Порожньо (Empty)\n", x, y);
+            break;
+    }
+}
+
+int main() {
+    char x;
+    int y;
+
+    printf("Введіть координати клітинки (літера та цифра): ");
+    scanf(" %c%d", &x, &y);
+
+    determineChessPiece(x, y);
+
+    return 0;
+}
