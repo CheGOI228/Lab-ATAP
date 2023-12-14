@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main() {
+    int count = 0;
+
+    for (int number = 1000; number < 10000; ++number) {
+        int firstDigit = number / 1000;
+        
+        if (number % 17 == 0 && number % firstDigit == 0) {
+            std::cout << number << " ділиться на 17 та на свою першу цифру.\n";
+            count++;
+        }
+    }
+
+    std::cout << "Загальна кількість таких чисел: " << count << std::endl;
+
+    return 0;
+}
