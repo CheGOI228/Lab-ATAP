@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+    printf("Введіть кількість чисел: ");
+    scanf("%d", &n);
+
+    double numbers[n];
+
+    printf("Введіть %d дійсних чисел:\n", n);
+    for (int i = 0; i < n; ++i) {
+        printf("A%d = ", i + 1);
+        scanf("%lf", &numbers[i]);
+    }
+
+    double maxAbsoluteValue = fabs(numbers[0]);
+    for (int i = 1; i < n; ++i) {
+        double absoluteValue = fabs(numbers[i]);
+        if (absoluteValue > maxAbsoluteValue) {
+            maxAbsoluteValue = absoluteValue;
+        }
+    }
+
+    printf("Максимальний модуль: %lf\n", maxAbsoluteValue);
+
+    return 0;
+}
